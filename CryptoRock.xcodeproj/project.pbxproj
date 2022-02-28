@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		058C98E8BA939C845856D2B0 /* Pods_CryptoRock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED586D91CAC058202BF350BB /* Pods_CryptoRock.framework */; };
 		D24B8C1927CD60730014D398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24B8C1827CD60730014D398 /* AppDelegate.swift */; };
 		D24B8C1B27CD60730014D398 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24B8C1A27CD60730014D398 /* SceneDelegate.swift */; };
 		D24B8C1D27CD60730014D398 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24B8C1C27CD60730014D398 /* ViewController.swift */; };
-		D24B8C2027CD60730014D398 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24B8C1E27CD60730014D398 /* Main.storyboard */; };
 		D24B8C2227CD60740014D398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24B8C2127CD60740014D398 /* Assets.xcassets */; };
 		D24B8C2527CD60740014D398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24B8C2327CD60740014D398 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B610E767E30A538BD9DEC0D /* Pods-CryptoRock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoRock.debug.xcconfig"; path = "Target Support Files/Pods-CryptoRock/Pods-CryptoRock.debug.xcconfig"; sourceTree = "<group>"; };
+		CCF70CC399A51049FEDEF582 /* Pods-CryptoRock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoRock.release.xcconfig"; path = "Target Support Files/Pods-CryptoRock/Pods-CryptoRock.release.xcconfig"; sourceTree = "<group>"; };
 		D24B8C1527CD60730014D398 /* CryptoRock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoRock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24B8C1827CD60730014D398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D24B8C1A27CD60730014D398 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D24B8C1C27CD60730014D398 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D24B8C1F27CD60730014D398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D24B8C2127CD60740014D398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D24B8C2427CD60740014D398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D24B8C2627CD60740014D398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED586D91CAC058202BF350BB /* Pods_CryptoRock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoRock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058C98E8BA939C845856D2B0 /* Pods_CryptoRock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AA401CFA3E6C9C040E5DA39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B610E767E30A538BD9DEC0D /* Pods-CryptoRock.debug.xcconfig */,
+				CCF70CC399A51049FEDEF582 /* Pods-CryptoRock.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6ACF9C6579B9434BEDEA9BF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED586D91CAC058202BF350BB /* Pods_CryptoRock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D24B8C0C27CD60730014D398 = {
 			isa = PBXGroup;
 			children = (
 				D24B8C1727CD60730014D398 /* CryptoRock */,
 				D24B8C1627CD60730014D398 /* Products */,
+				2AA401CFA3E6C9C040E5DA39 /* Pods */,
+				6ACF9C6579B9434BEDEA9BF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +78,46 @@
 		D24B8C1727CD60730014D398 /* CryptoRock */ = {
 			isa = PBXGroup;
 			children = (
-				D24B8C1827CD60730014D398 /* AppDelegate.swift */,
-				D24B8C1A27CD60730014D398 /* SceneDelegate.swift */,
-				D24B8C1C27CD60730014D398 /* ViewController.swift */,
-				D24B8C1E27CD60730014D398 /* Main.storyboard */,
-				D24B8C2127CD60740014D398 /* Assets.xcassets */,
-				D24B8C2327CD60740014D398 /* LaunchScreen.storyboard */,
-				D24B8C2627CD60740014D398 /* Info.plist */,
+				D24B8C2F27CD62540014D398 /* SupportingFiles */,
+				D24B8C2E27CD62470014D398 /* Model */,
+				D24B8C2D27CD62460014D398 /* View */,
+				D24B8C2C27CD62440014D398 /* Controller */,
 			);
 			path = CryptoRock;
+			sourceTree = "<group>";
+		};
+		D24B8C2C27CD62440014D398 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D24B8C1C27CD60730014D398 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D24B8C2D27CD62460014D398 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D24B8C2327CD60740014D398 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D24B8C2E27CD62470014D398 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D24B8C2F27CD62540014D398 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D24B8C2127CD60740014D398 /* Assets.xcassets */,
+				D24B8C1A27CD60730014D398 /* SceneDelegate.swift */,
+				D24B8C1827CD60730014D398 /* AppDelegate.swift */,
+				D24B8C2627CD60740014D398 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D24B8C2927CD60740014D398 /* Build configuration list for PBXNativeTarget "CryptoRock" */;
 			buildPhases = (
+				CA17E7BDF26099DF65639052 /* [CP] Check Pods Manifest.lock */,
 				D24B8C1127CD60730014D398 /* Sources */,
 				D24B8C1227CD60730014D398 /* Frameworks */,
 				D24B8C1327CD60730014D398 /* Resources */,
+				F7C1D6DB3AC09A22337FB3BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,11 +182,52 @@
 			files = (
 				D24B8C2527CD60740014D398 /* LaunchScreen.storyboard in Resources */,
 				D24B8C2227CD60740014D398 /* Assets.xcassets in Resources */,
-				D24B8C2027CD60730014D398 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA17E7BDF26099DF65639052 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoRock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7C1D6DB3AC09A22337FB3BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoRock/Pods-CryptoRock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoRock/Pods-CryptoRock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoRock/Pods-CryptoRock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D24B8C1127CD60730014D398 /* Sources */ = {
@@ -147,14 +243,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D24B8C1E27CD60730014D398 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D24B8C1F27CD60730014D398 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D24B8C2327CD60740014D398 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,17 +372,18 @@
 		};
 		D24B8C2A27CD60740014D398 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B610E767E30A538BD9DEC0D /* Pods-CryptoRock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJ8B9FFXUA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CryptoRock/Info.plist;
+				INFOPLIST_FILE = /Users/kirilldrozdov/Desktop/CryptoRock/CryptoRock/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,6 +393,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kiko.CryptoRock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,17 +402,18 @@
 		};
 		D24B8C2B27CD60740014D398 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCF70CC399A51049FEDEF582 /* Pods-CryptoRock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJ8B9FFXUA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CryptoRock/Info.plist;
+				INFOPLIST_FILE = /Users/kirilldrozdov/Desktop/CryptoRock/CryptoRock/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,6 +423,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kiko.CryptoRock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
