@@ -7,12 +7,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate
+{
 
-  override func viewDidLoad() {
+  private lazy var designMainView = MainScreenView()
+
+  override func loadView()
+  {
+
+    self.view = designMainView
+  }
+  override func viewDidLoad()
+  {
+
     super.viewDidLoad()
-    view.backgroundColor = .red  }
-
+    view.backgroundColor  = .red
+  }
 
 }
 

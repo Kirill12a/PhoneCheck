@@ -13,6 +13,8 @@
 		D24B8C1D27CD60730014D398 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24B8C1C27CD60730014D398 /* ViewController.swift */; };
 		D24B8C2227CD60740014D398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24B8C2127CD60740014D398 /* Assets.xcassets */; };
 		D24B8C2527CD60740014D398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24B8C2327CD60740014D398 /* LaunchScreen.storyboard */; };
+		D24B8C3127CD67980014D398 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24B8C3027CD67980014D398 /* MainScreenView.swift */; };
+		D24B8C3427CD6DC80014D398 /* GettingCourse .swift in Sources */ = {isa = PBXBuildFile; fileRef = D24B8C3327CD6DC80014D398 /* GettingCourse .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		D24B8C2127CD60740014D398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D24B8C2427CD60740014D398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D24B8C2627CD60740014D398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D24B8C3027CD67980014D398 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		D24B8C3327CD6DC80014D398 /* GettingCourse .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GettingCourse .swift"; sourceTree = "<group>"; };
 		ED586D91CAC058202BF350BB /* Pods_CryptoRock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoRock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,6 +82,7 @@
 		D24B8C1727CD60730014D398 /* CryptoRock */ = {
 			isa = PBXGroup;
 			children = (
+				D24B8C3227CD6D9D0014D398 /* NetworkManager */,
 				D24B8C2F27CD62540014D398 /* SupportingFiles */,
 				D24B8C2E27CD62470014D398 /* Model */,
 				D24B8C2D27CD62460014D398 /* View */,
@@ -98,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				D24B8C2327CD60740014D398 /* LaunchScreen.storyboard */,
+				D24B8C3027CD67980014D398 /* MainScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,6 +124,14 @@
 				D24B8C2627CD60740014D398 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D24B8C3227CD6D9D0014D398 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				D24B8C3327CD6DC80014D398 /* GettingCourse .swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +250,9 @@
 			files = (
 				D24B8C1D27CD60730014D398 /* ViewController.swift in Sources */,
 				D24B8C1927CD60730014D398 /* AppDelegate.swift in Sources */,
+				D24B8C3427CD6DC80014D398 /* GettingCourse .swift in Sources */,
 				D24B8C1B27CD60730014D398 /* SceneDelegate.swift in Sources */,
+				D24B8C3127CD67980014D398 /* MainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
