@@ -18,6 +18,7 @@ class MainScreenView: UIView
     label.text = "Хай ЗЯБЛС"
     return label
   }()
+  
 
 
   override init(frame: CGRect) {
