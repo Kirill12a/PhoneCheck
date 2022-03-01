@@ -15,6 +15,7 @@
 		D24B8C2527CD60740014D398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24B8C2327CD60740014D398 /* LaunchScreen.storyboard */; };
 		D24B8C3127CD67980014D398 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24B8C3027CD67980014D398 /* MainScreenView.swift */; };
 		D24B8C3427CD6DC80014D398 /* GettingCourse .swift in Sources */ = {isa = PBXBuildFile; fileRef = D24B8C3327CD6DC80014D398 /* GettingCourse .swift */; };
+		D24B8C3627CE11190014D398 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24B8C3527CE11190014D398 /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		D24B8C2627CD60740014D398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D24B8C3027CD67980014D398 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		D24B8C3327CD6DC80014D398 /* GettingCourse .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GettingCourse .swift"; sourceTree = "<group>"; };
+		D24B8C3527CE11190014D398 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		ED586D91CAC058202BF350BB /* Pods_CryptoRock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoRock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,8 +132,17 @@
 			isa = PBXGroup;
 			children = (
 				D24B8C3327CD6DC80014D398 /* GettingCourse .swift */,
+				D286F08227CEAAE900A351CB /* Model */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		D286F08227CEAAE900A351CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D24B8C3527CE11190014D398 /* Coin.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 				D24B8C3427CD6DC80014D398 /* GettingCourse .swift in Sources */,
 				D24B8C1B27CD60730014D398 /* SceneDelegate.swift in Sources */,
 				D24B8C3127CD67980014D398 /* MainScreenView.swift in Sources */,
+				D24B8C3627CE11190014D398 /* Coin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
