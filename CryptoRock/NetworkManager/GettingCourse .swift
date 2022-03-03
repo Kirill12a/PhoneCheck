@@ -14,14 +14,18 @@ class GettingCourse
   static let shared = GettingCourse()
 //  private init?(){}
 
-  func getCoins(comletion: @escaping(Coins)->Void){
-    guard let url = URL(string: "https://api.nomics.com/v1/currencies/ticker?key=65d826b99ad9177574292332ff03b21ca80d24b6&ranks=1&interval=id,30d&convert=USD&per-page=10&page=1") else {return}
-    let request = URLRequest(url:url)
+  func getCoins(phone:String ,comletion: @escaping(Coins)->Void){
+    guard let url = URL(string: "http://apilayer.net/api/validate?access_key=f9ebde7c49a49f220e740c12ab2e41ea&number=\(phone)&format=1") else {return}
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
-      if let data = data, let coins = try? JSONDecoder().decode(Coins.self, from: data) {
+      guard let data = data else {return}
+
+      do{
+        
+        let coins = try JSONDecoder().decode(Coins.self, from: data)
+        print(data)
         comletion(coins)
-      }else{
-        print("ПШНХ")
+      }catch{
+        print("\(error.localizedDescription) ======= ")
       }
     }
     task.resume()

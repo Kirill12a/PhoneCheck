@@ -6,36 +6,67 @@
 //
 
 import UIKit
-import Alamofire
 
-class ViewController: UIViewController, UISearchBarDelegate
+class ViewController: UIViewController
 {
 
-
-  var url = "https://jsonplaceholder.typicode.com/users"
+  var text:String?
 
   private lazy var designMainView = MainScreenView()
+  override func loadView(){self.view = designMainView}
 
-  override func loadView()
-  {
-    // дизайн из файла с UIVIEW
-    self.view = designMainView
-    GettingCourse.shared.getCoins(comletion: { coins in
-      print(coins[0].id)
-    })
-  }
   override func viewDidLoad()
   {
 
     super.viewDidLoad()
-    //    let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=55.897&lon=37.4297&lang=ru&units=metric&appid=6cbbebf9bfff951cf0aa15f5d206017c")!
+    view.backgroundColor  = UIColor(red: 248/255, green: 205/255, blue: 130/255, alpha: 100)
+    designMainView.enterPhoneTF.delegate = self
 
-    view.backgroundColor  = .red
-    GettingCourse.shared.getCoins(comletion: { coins in
-      print(coins.count)
-    })
+    designMainView.snapBtn.addTarget(self, action: #selector(buttonterget), for: .touchUpInside)
+  }
+}
 
+
+extension ViewController: UITextFieldDelegate {
+
+
+
+  func textFieldDidChangeSelection(_ textField: UITextField) {
+    text = textField.text
+    
   }
 
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    if let touch = touches.first as? UITouch {
+      view?.endEditing(true)
+    }
+  }
+
+  @objc func buttonterget(){
+    GettingCourse.shared.getCoins(phone: text!, comletion: { [self] coins in
+      DispatchQueue.main.async {
+        if coins.valid == true{
+          designMainView.doneOrNotDone.text = "✅"
+          designMainView.imageCountry.image = UIImage(named: "country")
+          designMainView.testText.text = coins.number
+          designMainView.phoneNubmer.text = coins.location
+          designMainView.activity.stopAnimating()
+        }
+
+        if coins.valid == false{
+          print("Hi")
+
+          designMainView.doneOrNotDone.text = "👎"
+          designMainView.imageCountry.image = UIImage(systemName: "xmark.octagon")
+          designMainView.testText.text = "error"
+          designMainView.phoneNubmer.text = "error"
+          designMainView.activity.stopAnimating()
+        }
+
+      }
+    })
+  }
+
+  
 }
 

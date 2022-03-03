@@ -23,21 +23,12 @@ import Foundation
 import Foundation
 
 // MARK: - Coin
-struct Coin: Codable {
-    let id, currency, symbol, name: String
-    let logo_url: String
-    let price: String
-    let price_date, price_timestamp: Date
-    let circulating_supply: String
-    let max_supply: String?
-    let market_cap, market_cap_dominance, num_exchanges, num_pairs: String
-    let num_pairs_unmapped: String
-    let first_candle, first_trade, first_order_book: Date
-    let rank, rank_delta, high: String
-    let high_timestamp: Date
-    let platform_currency: String?
-}
+struct Coins: Codable {
+    let valid: Bool
+    let number, local_format, international_format, country_prefix: String
+    let country_code, country_name, location, carrier: String
+//    let line_type: String?
 
-typealias Coins = [Coin]
+}
 
 
