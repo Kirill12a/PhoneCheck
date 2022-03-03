@@ -14,13 +14,15 @@ class GettingCourse
   static let shared = GettingCourse()
 //  private init?(){}
 
-  func getCoins(comletion: @escaping(Coins)->Void){
-    guard let url = URL(string: "http://apilayer.net/api/validate?access_key=a42407725a7256c4c5ccc300b5ac71a2&number=89116520825&country_code=RU&format=1") else {return}
+  func getCoins(phone:String ,comletion: @escaping(Coins)->Void){
+    guard let url = URL(string: "http://apilayer.net/api/validate?access_key=f9ebde7c49a49f220e740c12ab2e41ea&number=\(phone)&format=1") else {return}
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
-      guard let data = data, let response = response else {return}
+      guard let data = data else {return}
 
       do{
+        
         let coins = try JSONDecoder().decode(Coins.self, from: data)
+        print(data)
         comletion(coins)
       }catch{
         print("\(error.localizedDescription) ======= ")

@@ -24,15 +24,10 @@ import Foundation
 
 // MARK: - Coin
 struct Coins: Codable {
-  let valid: Bool
-  let number, local_format: String
-  let international_format: String
-let country_prefix: String
-  let country_code: String
-  let country_name: String
-  let locatio: String
-  let carrier: String
-  let line_type: String
+    let valid: Bool
+    let number, local_format, international_format, country_prefix: String
+    let country_code, country_name, location, carrier: String
+//    let line_type: String?
 
 }
 
