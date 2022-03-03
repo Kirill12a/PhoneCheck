@@ -21,11 +21,9 @@ class GettingCourse
 
       do{
         let coins = try JSONDecoder().decode(Coins.self, from: data)
-        print("Hl")
         comletion(coins)
       }catch{
         print("\(error.localizedDescription) ======= ")
-        print("BB")
       }
     }
     task.resume()

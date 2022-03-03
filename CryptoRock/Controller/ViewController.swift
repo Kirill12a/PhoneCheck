@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UISearchBarDelegate
+class ViewController: UIViewController
 {
 
 
@@ -33,4 +33,22 @@ class ViewController: UIViewController, UISearchBarDelegate
 }
 
 
+extension ViewController: UITextFieldDelegate {
+
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    print("Hi")
+  }
+
+  func textFieldDidChangeSelection(_ textField: UITextField) {
+    print("Hello")
+  }
+
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    if let touch = touches.first as? UITouch {
+      view?.endEditing(true)
+    }
+  }
+
+  
+}
 
