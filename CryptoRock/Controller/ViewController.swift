@@ -33,7 +33,6 @@ extension ViewController: UITextFieldDelegate {
 
   func textFieldDidChangeSelection(_ textField: UITextField) {
     text = textField.text
-    
   }
 
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
