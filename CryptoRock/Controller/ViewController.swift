@@ -22,51 +22,51 @@ class ViewController: UIViewController
     view.backgroundColor  = UIColor(red: 248/255, green: 205/255, blue: 130/255, alpha: 100)
     designMainView.enterPhoneTF.delegate = self
 
-    designMainView.snapBtn.addTarget(self, action: #selector(buttonterget), for: .touchUpInside)
+    designMainView.sendDataButton.addTarget(self, action: #selector(buttonterget), for: .touchUpInside)
   }
 }
 
 
-extension ViewController: UITextFieldDelegate {
+extension ViewController: UITextFieldDelegate
+{
 
-
-
-  func textFieldDidChangeSelection(_ textField: UITextField) {
+  func textFieldDidChangeSelection(_ textField: UITextField)
+  {
     text = textField.text
-    
   }
 
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    if let touch = touches.first as? UITouch {
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+  {
+
+    if let touch = touches.first as? UITouch
+    {
       view?.endEditing(true)
     }
   }
 
-  @objc func buttonterget(){
-    GettingCourse.shared.getCoins(phone: text!, comletion: { [self] coins in
+  @objc func buttonterget()
+  {
+    GettingCourse.shared?.getCoins(phone: text!, comletion: { [self] coins in
       DispatchQueue.main.async {
         if coins.valid == true{
           designMainView.doneOrNotDone.text = "✅"
           designMainView.imageCountry.image = UIImage(named: "country")
-          designMainView.testText.text = coins.number
-          designMainView.phoneNubmer.text = coins.location
-          designMainView.activity.stopAnimating()
+          designMainView.numberTextLabel.text = coins.number
+          designMainView.locationNumberLabel.text = coins.location
+          designMainView.activityIndicator.stopAnimating()
         }
 
-        if coins.valid == false{
-          print("Hi")
-
+        if coins.valid == false
+        {
           designMainView.doneOrNotDone.text = "👎"
           designMainView.imageCountry.image = UIImage(systemName: "xmark.octagon")
-          designMainView.testText.text = "error"
-          designMainView.phoneNubmer.text = "error"
-          designMainView.activity.stopAnimating()
+          designMainView.numberTextLabel.text = "error"
+          designMainView.locationNumberLabel.text = "error"
+          designMainView.activityIndicator.stopAnimating()
         }
 
       }
     })
   }
-
-  
 }
 

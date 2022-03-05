@@ -23,12 +23,11 @@ import Foundation
 import Foundation
 
 // MARK: - Coin
-struct Coins: Codable {
+struct Coins: Codable
+{
     let valid: Bool
     let number, local_format, international_format, country_prefix: String
     let country_code, country_name, location, carrier: String
-//    let line_type: String?
-
 }
 
 
